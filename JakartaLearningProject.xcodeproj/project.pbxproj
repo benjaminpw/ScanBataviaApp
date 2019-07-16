@@ -15,6 +15,8 @@
 		8B03A2B222D9466700BF35FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B03A2B022D9466700BF35FD /* LaunchScreen.storyboard */; };
 		8B03A2BA22D9486100BF35FD /* MLKotaTuaV3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 8B03A2B922D9486100BF35FD /* MLKotaTuaV3.mlmodel */; };
 		8B03A2BC22D94A3700BF35FD /* AchievementController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B03A2BB22D94A3700BF35FD /* AchievementController.swift */; };
+		8B03A2BE22DC91A300BF35FD /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B03A2BD22DC91A300BF35FD /* MapController.swift */; };
+		8B03A2C022DC91BF00BF35FD /* InformationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B03A2BF22DC91BF00BF35FD /* InformationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		8B03A2B322D9466700BF35FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B03A2B922D9486100BF35FD /* MLKotaTuaV3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MLKotaTuaV3.mlmodel; sourceTree = "<group>"; };
 		8B03A2BB22D94A3700BF35FD /* AchievementController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementController.swift; sourceTree = "<group>"; };
+		8B03A2BD22DC91A300BF35FD /* MapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
+		8B03A2BF22DC91BF00BF35FD /* InformationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,10 +66,12 @@
 			children = (
 				8B03A2A422D9466600BF35FD /* AppDelegate.swift */,
 				8B03A2A622D9466600BF35FD /* ScanController.swift */,
+				8B03A2BD22DC91A300BF35FD /* MapController.swift */,
 				8B03A2BB22D94A3700BF35FD /* AchievementController.swift */,
+				8B03A2BF22DC91BF00BF35FD /* InformationController.swift */,
+				8B03A2AE22D9466700BF35FD /* Assets.xcassets */,
 				8B03A2B922D9486100BF35FD /* MLKotaTuaV3.mlmodel */,
 				8B03A2A822D9466600BF35FD /* Main.storyboard */,
-				8B03A2AE22D9466700BF35FD /* Assets.xcassets */,
 				8B03A2B022D9466700BF35FD /* LaunchScreen.storyboard */,
 				8B03A2B322D9466700BF35FD /* Info.plist */,
 				8B03A2AB22D9466600BF35FD /* JakartaLearningProject.xcdatamodeld */,
@@ -148,6 +154,8 @@
 				8B03A2A522D9466600BF35FD /* AppDelegate.swift in Sources */,
 				8B03A2BC22D94A3700BF35FD /* AchievementController.swift in Sources */,
 				8B03A2BA22D9486100BF35FD /* MLKotaTuaV3.mlmodel in Sources */,
+				8B03A2BE22DC91A300BF35FD /* MapController.swift in Sources */,
+				8B03A2C022DC91BF00BF35FD /* InformationController.swift in Sources */,
 				8B03A2AD22D9466600BF35FD /* JakartaLearningProject.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

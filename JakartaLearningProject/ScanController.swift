@@ -37,7 +37,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     
     func startCamera() {
         let captureSession = AVCaptureSession()
-        captureSession.sessionPreset = .photo
+//        captureSession.sessionPreset = .photo
         
         guard let captureDevice = AVCaptureDevice.default(for: .video) else { return }
         guard let input = try? AVCaptureDeviceInput(device: captureDevice) else { return }
