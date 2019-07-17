@@ -9,11 +9,20 @@
 import UIKit
 
 class InformationController: UIViewController {
-
+    
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    
+    var data = loadData()
+//    var data:Data
+    var selectedData:Data? = nil
+    var selectedIndex: Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+//        print(selectedIndex!)
+        titleLabel.text = data[selectedIndex].title
+        descriptionLabel.text = data[selectedIndex].description
     }
     
 
