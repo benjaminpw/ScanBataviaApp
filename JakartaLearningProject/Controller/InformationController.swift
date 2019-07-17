@@ -10,6 +10,8 @@ import UIKit
 
 class InformationController: UIViewController {
     
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     
@@ -20,7 +22,8 @@ class InformationController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        print(selectedIndex!)
+//        print(data[selectedIndex].title)
+        image.image = UIImage(named: data[selectedIndex].image)
         titleLabel.text = data[selectedIndex].title
         descriptionLabel.text = data[selectedIndex].description
     }
