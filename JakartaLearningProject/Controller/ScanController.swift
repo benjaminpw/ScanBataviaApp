@@ -181,8 +181,12 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         }
     }
 
+    //Testing Purposes
     
-    
+    @IBAction func testButton(_ sender: Any) {
+        scannedData = 0
+        self.performSegue(withIdentifier:"informationSegue", sender: self)
+    }
     
     
 }
