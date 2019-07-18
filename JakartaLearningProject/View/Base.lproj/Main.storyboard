@@ -210,6 +210,12 @@
                                                                 <constraint firstAttribute="width" constant="387" id="Rxr-9g-fx1"/>
                                                             </constraints>
                                                         </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L19-3p-XJp">
+                                                            <rect key="frame" x="0.0" y="275" width="387" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" red="0.99763482810000004" green="0.75061158090000002" blue="0.31111527820000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
@@ -236,6 +242,7 @@
                     <navigationItem key="navigationItem" id="EPl-IP-RIK"/>
                     <connections>
                         <outlet property="collectionView" destination="WGD-yN-d0N" id="Pip-25-Gnx"/>
+                        <segue destination="oSA-Pi-IFS" kind="show" identifier="exploreSegue" id="x4k-V3-irV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Oe-db-5ZL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -311,4 +318,7 @@
         <image name="peta-1" width="600" height="683"/>
         <image name="scan" width="26" height="26"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="x4k-V3-irV"/>
+    </inferredMetricsTieBreakers>
 </document>

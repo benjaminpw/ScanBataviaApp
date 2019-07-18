@@ -29,9 +29,6 @@ class InformationController: UIViewController {
         self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
-    @IBAction func backButton(_ sender: Any) {
-    }
-    
     /*
     // MARK: - Navigation
 
