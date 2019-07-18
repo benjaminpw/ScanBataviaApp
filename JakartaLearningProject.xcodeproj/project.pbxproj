@@ -19,6 +19,7 @@
 		8B03A2C022DC91BF00BF35FD /* InformationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B03A2BF22DC91BF00BF35FD /* InformationController.swift */; };
 		8B03A2C422DDB8A600BF35FD /* ApplicationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B03A2C322DDB8A600BF35FD /* ApplicationData.swift */; };
 		8B03A2CF22DF06BC00BF35FD /* MLKotaTuaV4.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 8B03A2CE22DF06BC00BF35FD /* MLKotaTuaV4.mlmodel */; };
+		8B03A2D722E06BE000BF35FD /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B03A2D622E06BE000BF35FD /* PhotoCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		8B03A2BF22DC91BF00BF35FD /* InformationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationController.swift; sourceTree = "<group>"; };
 		8B03A2C322DDB8A600BF35FD /* ApplicationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationData.swift; sourceTree = "<group>"; };
 		8B03A2CE22DF06BC00BF35FD /* MLKotaTuaV4.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MLKotaTuaV4.mlmodel; sourceTree = "<group>"; };
+		8B03A2D622E06BE000BF35FD /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				8B03A2A822D9466600BF35FD /* Main.storyboard */,
+				8B03A2D622E06BE000BF35FD /* PhotoCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -186,6 +189,7 @@
 				8B03A2CF22DF06BC00BF35FD /* MLKotaTuaV4.mlmodel in Sources */,
 				8B03A2BA22D9486100BF35FD /* MLKotaTuaV3.mlmodel in Sources */,
 				8B03A2BE22DC91A300BF35FD /* MapController.swift in Sources */,
+				8B03A2D722E06BE000BF35FD /* PhotoCell.swift in Sources */,
 				8B03A2C022DC91BF00BF35FD /* InformationController.swift in Sources */,
 				8B03A2C422DDB8A600BF35FD /* ApplicationData.swift in Sources */,
 				8B03A2AD22D9466600BF35FD /* JakartaLearningProject.xcdatamodeld in Sources */,
