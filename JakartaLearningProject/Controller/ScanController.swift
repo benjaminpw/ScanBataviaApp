@@ -32,6 +32,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         super.viewDidLoad()
 //        setupIdentifierConfidenceLabel()
 //        self.view.bringSubviewToFront(identifierLabel)
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
         identifierLabel.layer.zPosition = 1
         identifierLabel.isUserInteractionEnabled = true
         startCamera()
@@ -40,6 +41,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     
     override func viewWillAppear(_ animated: Bool) {
         captured = false
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
 //    fileprivate func setupIdentifierConfidenceLabel() {

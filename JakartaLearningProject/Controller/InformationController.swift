@@ -26,6 +26,7 @@ class InformationController: UIViewController {
         image.image = UIImage(named: data[selectedIndex].image)
         titleLabel.text = data[selectedIndex].title
         descriptionLabel.text = data[selectedIndex].description
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
     @IBAction func backButton(_ sender: Any) {
