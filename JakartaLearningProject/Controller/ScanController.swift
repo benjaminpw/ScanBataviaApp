@@ -25,8 +25,8 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     
     var scannedData = 0
     var captured = false
-    var tempScan = ""
-    var timer = Timer()
+    var tempScan: String?
+    var timer: Timer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,11 +37,24 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         identifierLabel.isUserInteractionEnabled = true
         startCamera()
         self.captured = false
+        timer = Timer.init(timeInterval: 2, target: self, selector: #selector(detect(new:)), userInfo: nil, repeats: false)
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
+    @objc func detect(new: String) {
+        if let _ = timer, let _ = tempScan {
+            timer?.invalidate()
+        }
+        print("2 second passed")
     }
     
     override func viewWillAppear(_ animated: Bool) {
         captured = false
         self.navigationController?.setNavigationBarHidden(true, animated: true)
+        timer = Timer.init(timeInterval: 2, target: self, selector: #selector(detect(new:)), userInfo: nil, repeats: false)
     }
     
 //    fileprivate func setupIdentifierConfidenceLabel() {
@@ -117,6 +130,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
                     switch firstObservation.identifier {
                     case "Café Batavia":
                         if !self.captured {
+                            self.detect(new: firstObservation.identifier)
                             self.performSegue(withIdentifier:"informationSegue", sender: self)
                             print("Scanned Success \(firstObservation.identifier) , \(firstObservation.confidence)")
                             self.identifierLabel.text = firstObservation.identifier
@@ -125,6 +139,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
                         print(self.captured)
                     case "The Wayang Museum":
                         if !self.captured {
+                            self.detect(new: firstObservation.identifier)
                             self.performSegue(withIdentifier:"informationSegue", sender: self)
                             print("Scanned Success \(firstObservation.identifier) , \(firstObservation.confidence)")
                             self.identifierLabel.text = firstObservation.identifier
@@ -133,6 +148,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
                         print(self.captured)
                     case "The Bank Indonesia Museum":
                         if !self.captured {
+                            self.detect(new: firstObservation.identifier)
                             self.performSegue(withIdentifier:"informationSegue", sender: self)
                             print("Scanned Success \(firstObservation.identifier) , \(firstObservation.confidence)")
                             self.identifierLabel.text = firstObservation.identifier
@@ -141,6 +157,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
                         print(self.captured)
                     case "The Bank Mandiri Museum":
                         if !self.captured {
+                            self.detect(new: firstObservation.identifier)
                             self.performSegue(withIdentifier:"informationSegue", sender: self)
                             print("Scanned Success \(firstObservation.identifier) , \(firstObservation.confidence)")
                             self.identifierLabel.text = firstObservation.identifier
@@ -149,6 +166,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
                         print(self.captured)
                     case "Jakarta History Museum":
                         if !self.captured {
+                            self.detect(new: firstObservation.identifier)
                             self.performSegue(withIdentifier:"informationSegue", sender: self)
                             print("Scanned Success \(firstObservation.identifier) , \(firstObservation.confidence)")
                             self.identifierLabel.text = firstObservation.identifier
@@ -157,6 +175,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
                         print(self.captured)
                     case "The Fine Arts and Ceramic Museum":
                         if !self.captured {
+                            self.detect(new: firstObservation.identifier)
                             self.performSegue(withIdentifier:"informationSegue", sender: self)
                             print("Scanned Success \(firstObservation.identifier) , \(firstObservation.confidence)")
                             self.identifierLabel.text = firstObservation.identifier
@@ -165,6 +184,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
                         print(self.captured)
                     case "The Red Shop":
                         if !self.captured {
+                            self.detect(new: firstObservation.identifier)
                             self.performSegue(withIdentifier:"informationSegue", sender: self)
                             print("Scanned Success \(firstObservation.identifier) , \(firstObservation.confidence)")
                             self.identifierLabel.text = firstObservation.identifier
@@ -175,7 +195,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
                         return
                     }
                 } else {
-                    self.identifierLabel.text = "Please point to an object!"
+                    self.identifierLabel.text = "Point to an object!"
                 }
                 
                 

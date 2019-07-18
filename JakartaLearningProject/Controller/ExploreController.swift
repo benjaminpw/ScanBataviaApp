@@ -93,6 +93,13 @@ class ExploreViewController: UIViewController, UICollectionViewDataSource, UICol
         self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
     
     
 }
