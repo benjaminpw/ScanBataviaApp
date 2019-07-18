@@ -28,7 +28,9 @@ class InformationController: UIViewController {
         descriptionLabel.text = data[selectedIndex].description
     }
     
-
+    @IBAction func backButton(_ sender: Any) {
+    }
+    
     /*
     // MARK: - Navigation
 

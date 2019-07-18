@@ -202,7 +202,8 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
-                                            <segue destination="4Ju-mD-nvL" kind="show" id="gat-lz-qip"/>
+                                            <action selector="backButton:" destination="oSA-Pi-IFS" eventType="touchUpInside" id="92m-g3-wGr"/>
+                                            <segue destination="4Ju-mD-nvL" kind="show" id="jju-qd-dxZ"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fn4-HE-Bjy">

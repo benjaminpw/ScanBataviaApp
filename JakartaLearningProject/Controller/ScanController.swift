@@ -110,7 +110,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
             
             
             DispatchQueue.main.async {
-                if firstObservation.confidence >= 0.95{
+                if firstObservation.confidence >= 0.98{
                     
                     switch firstObservation.identifier {
                     case "Café Batavia":
