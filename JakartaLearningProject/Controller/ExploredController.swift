@@ -66,7 +66,7 @@ class ExploreViewController: UIViewController, UICollectionViewDataSource, UICol
         let xInsets: CGFloat = 10
         let cellSpacing: CGFloat = 5
         
-        return CGSize(width: (width / numberOfColumns) - (xInsets + cellSpacing), height: (width / numberOfColumns) - (xInsets + cellSpacing))
+        return CGSize(width: (width / numberOfColumns) - (xInsets + cellSpacing), height: (width / numberOfColumns * 1.5) - (xInsets + cellSpacing))
     }
     
     @IBOutlet weak var collectionView: UICollectionView!

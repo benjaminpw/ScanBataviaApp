@@ -37,7 +37,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         identifierLabel.isUserInteractionEnabled = true
         startCamera()
         self.captured = false
-        timer = Timer.init(timeInterval: 2, target: self, selector: #selector(detect(new:)), userInfo: nil, repeats: false)
+//        timer = Timer.init(timeInterval: 2, target: self, selector: #selector(detect(new:)), userInfo: nil, repeats: false)
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -93,7 +93,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         guard let pixelBuffer: CVPixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else { return }
         
         
-        guard let model = try? VNCoreMLModel(for: MLKotaTuaV4().model) else { return }
+        guard let model = try? VNCoreMLModel(for: MLKotaTuaV5().model) else { return }
         
         let request = VNCoreMLRequest(model: model) { (finishedReq, err) in
             
@@ -121,81 +121,92 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
             } else if firstObservation.identifier == "The Red Shop" {
                 self.scannedData = 6
                 self.tempScan = firstObservation.identifier
+            } else if firstObservation.identifier == "Else" {
+                self.tempScan = "Else"
             }
             
             
             DispatchQueue.main.async {
                 if firstObservation.confidence >= 0.98{
-                    
+                    self.timer = Timer.init(timeInterval: 2, target: self, selector: #selector(self.detect(new:)), userInfo: nil, repeats: false)
+                    self.detect(new: firstObservation.identifier)
                     switch firstObservation.identifier {
                     case "Café Batavia":
                         if !self.captured {
-                            self.detect(new: firstObservation.identifier)
-                            self.performSegue(withIdentifier:"informationSegue", sender: self)
+                            self.detect(new: firstObservation.identifier) //timer
+//                            self.performSegue(withIdentifier:"informationSegue", sender: self)
                             print("Scanned Success \(firstObservation.identifier) , \(firstObservation.confidence)")
                             self.identifierLabel.text = firstObservation.identifier
                             self.captured = true
                         }
                         print(self.captured)
+                        self.identifierLabel.text = firstObservation.identifier
                     case "The Wayang Museum":
                         if !self.captured {
                             self.detect(new: firstObservation.identifier)
-                            self.performSegue(withIdentifier:"informationSegue", sender: self)
+//                            self.performSegue(withIdentifier:"informationSegue", sender: self)
                             print("Scanned Success \(firstObservation.identifier) , \(firstObservation.confidence)")
                             self.identifierLabel.text = firstObservation.identifier
                             self.captured = true
                         }
                         print(self.captured)
+                        self.identifierLabel.text = firstObservation.identifier
                     case "The Bank Indonesia Museum":
                         if !self.captured {
                             self.detect(new: firstObservation.identifier)
-                            self.performSegue(withIdentifier:"informationSegue", sender: self)
+//                            self.performSegue(withIdentifier:"informationSegue", sender: self)
                             print("Scanned Success \(firstObservation.identifier) , \(firstObservation.confidence)")
                             self.identifierLabel.text = firstObservation.identifier
                             self.captured = true
                         }
                         print(self.captured)
+                        self.identifierLabel.text = firstObservation.identifier
                     case "The Bank Mandiri Museum":
                         if !self.captured {
                             self.detect(new: firstObservation.identifier)
-                            self.performSegue(withIdentifier:"informationSegue", sender: self)
+//                            self.performSegue(withIdentifier:"informationSegue", sender: self)
                             print("Scanned Success \(firstObservation.identifier) , \(firstObservation.confidence)")
                             self.identifierLabel.text = firstObservation.identifier
                             self.captured = true
                         }
                         print(self.captured)
+                        self.identifierLabel.text = firstObservation.identifier
                     case "Jakarta History Museum":
                         if !self.captured {
                             self.detect(new: firstObservation.identifier)
-                            self.performSegue(withIdentifier:"informationSegue", sender: self)
+//                            self.performSegue(withIdentifier:"informationSegue", sender: self)
                             print("Scanned Success \(firstObservation.identifier) , \(firstObservation.confidence)")
                             self.identifierLabel.text = firstObservation.identifier
                             self.captured = true
                         }
                         print(self.captured)
+                        self.identifierLabel.text = firstObservation.identifier
                     case "The Fine Arts and Ceramic Museum":
                         if !self.captured {
                             self.detect(new: firstObservation.identifier)
-                            self.performSegue(withIdentifier:"informationSegue", sender: self)
+//                            self.performSegue(withIdentifier:"informationSegue", sender: self)
                             print("Scanned Success \(firstObservation.identifier) , \(firstObservation.confidence)")
                             self.identifierLabel.text = firstObservation.identifier
                             self.captured = true
                         }
                         print(self.captured)
+                        self.identifierLabel.text = firstObservation.identifier
                     case "The Red Shop":
                         if !self.captured {
                             self.detect(new: firstObservation.identifier)
-                            self.performSegue(withIdentifier:"informationSegue", sender: self)
+//                            self.performSegue(withIdentifier:"informationSegue", sender: self)
                             print("Scanned Success \(firstObservation.identifier) , \(firstObservation.confidence)")
                             self.identifierLabel.text = firstObservation.identifier
                             self.captured = true
                         }
                         print(self.captured)
+                        self.identifierLabel.text = firstObservation.identifier
                     default:
                         return
                     }
                 } else {
-                    self.identifierLabel.text = "Point to an object!"
+//                    self.detect(new: firstObservation.identifier)
+                    self.identifierLabel.text = "Point to an object and tap"
                 }
                 
                 
@@ -222,8 +233,10 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     //Testing Purposes
     
     @IBAction func testButton(_ sender: Any) {
-        scannedData = 0
-        self.performSegue(withIdentifier:"informationSegue", sender: self)
+        
+        if tempScan != "Else" {
+            self.performSegue(withIdentifier:"informationSegue", sender: self)
+        }
     }
     
     

@@ -15,9 +15,8 @@ class MapController: UIViewController, UIScrollViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         self.scrollView.minimumZoomScale = 1.0
-        self.scrollView.maximumZoomScale = 6.0
+        self.scrollView.maximumZoomScale = 4.0
     }
     
     func viewForZooming(in scrollView: UIScrollView) -> UIView? {

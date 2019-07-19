@@ -17,7 +17,7 @@ class InformationController: UIViewController {
     
     var data = loadData()
 //    var data:Data
-    var selectedData:Data? = nil
+    var selectedData:PlaceData? = nil
     var selectedIndex: Int = 0
     
     override func viewDidLoad() {
@@ -27,6 +27,7 @@ class InformationController: UIViewController {
         titleLabel.text = data[selectedIndex].title
         descriptionLabel.text = data[selectedIndex].description
         self.navigationController?.setNavigationBarHidden(false, animated: true)
+//        data[0].description = ""
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {

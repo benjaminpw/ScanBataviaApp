@@ -13,13 +13,13 @@
 		8B03A2AD22D9466600BF35FD /* JakartaLearningProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8B03A2AB22D9466600BF35FD /* JakartaLearningProject.xcdatamodeld */; };
 		8B03A2AF22D9466700BF35FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B03A2AE22D9466700BF35FD /* Assets.xcassets */; };
 		8B03A2B222D9466700BF35FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B03A2B022D9466700BF35FD /* LaunchScreen.storyboard */; };
-		8B03A2BA22D9486100BF35FD /* MLKotaTuaV3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 8B03A2B922D9486100BF35FD /* MLKotaTuaV3.mlmodel */; };
-		8B03A2BC22D94A3700BF35FD /* ExploreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B03A2BB22D94A3700BF35FD /* ExploreController.swift */; };
-		8B03A2BE22DC91A300BF35FD /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B03A2BD22DC91A300BF35FD /* MapController.swift */; };
+		8B03A2BC22D94A3700BF35FD /* ExploredController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B03A2BB22D94A3700BF35FD /* ExploredController.swift */; };
+		8B03A2BE22DC91A300BF35FD /* DiscoverController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B03A2BD22DC91A300BF35FD /* DiscoverController.swift */; };
 		8B03A2C022DC91BF00BF35FD /* InformationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B03A2BF22DC91BF00BF35FD /* InformationController.swift */; };
 		8B03A2C422DDB8A600BF35FD /* ApplicationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B03A2C322DDB8A600BF35FD /* ApplicationData.swift */; };
 		8B03A2CF22DF06BC00BF35FD /* MLKotaTuaV4.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 8B03A2CE22DF06BC00BF35FD /* MLKotaTuaV4.mlmodel */; };
 		8B03A2D722E06BE000BF35FD /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B03A2D622E06BE000BF35FD /* PhotoCell.swift */; };
+		8BC9B6D422E1BC0900F36F01 /* MLKotaTuaV5.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 8BC9B6D322E1BC0900F36F01 /* MLKotaTuaV5.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,13 +31,13 @@
 		8B03A2AE22D9466700BF35FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B03A2B122D9466700BF35FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8B03A2B322D9466700BF35FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8B03A2B922D9486100BF35FD /* MLKotaTuaV3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MLKotaTuaV3.mlmodel; sourceTree = "<group>"; };
-		8B03A2BB22D94A3700BF35FD /* ExploreController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreController.swift; sourceTree = "<group>"; };
-		8B03A2BD22DC91A300BF35FD /* MapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
+		8B03A2BB22D94A3700BF35FD /* ExploredController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploredController.swift; sourceTree = "<group>"; };
+		8B03A2BD22DC91A300BF35FD /* DiscoverController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverController.swift; sourceTree = "<group>"; };
 		8B03A2BF22DC91BF00BF35FD /* InformationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationController.swift; sourceTree = "<group>"; };
 		8B03A2C322DDB8A600BF35FD /* ApplicationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationData.swift; sourceTree = "<group>"; };
 		8B03A2CE22DF06BC00BF35FD /* MLKotaTuaV4.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MLKotaTuaV4.mlmodel; sourceTree = "<group>"; };
 		8B03A2D622E06BE000BF35FD /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		8BC9B6D322E1BC0900F36F01 /* MLKotaTuaV5.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MLKotaTuaV5.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,8 +85,8 @@
 		8B03A2C522DDB8AF00BF35FD /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				8B03A2B922D9486100BF35FD /* MLKotaTuaV3.mlmodel */,
 				8B03A2CE22DF06BC00BF35FD /* MLKotaTuaV4.mlmodel */,
+				8BC9B6D322E1BC0900F36F01 /* MLKotaTuaV5.mlmodel */,
 				8B03A2C322DDB8A600BF35FD /* ApplicationData.swift */,
 			);
 			path = Model;
@@ -96,8 +96,8 @@
 			isa = PBXGroup;
 			children = (
 				8B03A2A622D9466600BF35FD /* ScanController.swift */,
-				8B03A2BD22DC91A300BF35FD /* MapController.swift */,
-				8B03A2BB22D94A3700BF35FD /* ExploreController.swift */,
+				8B03A2BD22DC91A300BF35FD /* DiscoverController.swift */,
+				8B03A2BB22D94A3700BF35FD /* ExploredController.swift */,
 				8B03A2BF22DC91BF00BF35FD /* InformationController.swift */,
 			);
 			path = Controller;
@@ -184,11 +184,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B03A2A722D9466600BF35FD /* ScanController.swift in Sources */,
+				8BC9B6D422E1BC0900F36F01 /* MLKotaTuaV5.mlmodel in Sources */,
 				8B03A2A522D9466600BF35FD /* AppDelegate.swift in Sources */,
-				8B03A2BC22D94A3700BF35FD /* ExploreController.swift in Sources */,
+				8B03A2BC22D94A3700BF35FD /* ExploredController.swift in Sources */,
 				8B03A2CF22DF06BC00BF35FD /* MLKotaTuaV4.mlmodel in Sources */,
-				8B03A2BA22D9486100BF35FD /* MLKotaTuaV3.mlmodel in Sources */,
-				8B03A2BE22DC91A300BF35FD /* MapController.swift in Sources */,
+				8B03A2BE22DC91A300BF35FD /* DiscoverController.swift in Sources */,
 				8B03A2D722E06BE000BF35FD /* PhotoCell.swift in Sources */,
 				8B03A2C022DC91BF00BF35FD /* InformationController.swift in Sources */,
 				8B03A2C422DDB8A600BF35FD /* ApplicationData.swift in Sources */,

@@ -26,7 +26,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aKb-B6-nuF">
-                                <rect key="frame" x="184" y="546" width="46" height="30"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="676"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
@@ -47,7 +47,7 @@
             </objects>
             <point key="canvasLocation" x="2773.913043478261" y="-667.63392857142856"/>
         </scene>
-        <!--Map-->
+        <!--Discover-->
         <scene sceneID="w1r-ld-UQA">
             <objects>
                 <viewController id="rn5-bT-KNt" customClass="MapController" customModule="JakartaLearningProject" customModuleProvider="target" sceneMemberID="viewController">
@@ -59,8 +59,15 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="peta-1" translatesAutoresizingMaskIntoConstraints="NO" id="umf-Dj-Xva">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="769"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414.00000000000023" height="769.00000000000023"/>
                                     </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Discover" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k8Q-iP-dae">
+                                        <rect key="frame" x="15" y="44" width="128" height="41"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                        <color key="textColor" red="0.99763482810000004" green="0.75061158090000002" blue="0.31111527820000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="umf-Dj-Xva" secondAttribute="bottom" id="CQM-FT-neP"/>
@@ -84,7 +91,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Bp0-Gl-rRd"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Map" image="map" id="SPX-rv-9wd"/>
+                    <tabBarItem key="tabBarItem" title="Discover" image="map" id="SPX-rv-9wd"/>
                     <connections>
                         <outlet property="imageView" destination="umf-Dj-Xva" id="99D-bS-BYk"/>
                         <outlet property="scrollView" destination="OgL-3t-3qx" id="4GS-wa-Rfc"/>
@@ -168,7 +175,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="WGD-yN-d0N">
-                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <rect key="frame" x="0.0" y="159" width="414" height="737"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <inset key="scrollIndicatorInsets" minX="10" minY="10" maxX="10" maxY="10"/>
@@ -197,12 +204,6 @@
                                                                 <constraint firstAttribute="width" constant="387" id="Rxr-9g-fx1"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L19-3p-XJp">
-                                                            <rect key="frame" x="0.0" y="275" width="387" height="20.5"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <color key="textColor" red="0.99763482810000004" green="0.75061158090000002" blue="0.31111527820000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
@@ -222,6 +223,13 @@
                                     <outlet property="delegate" destination="ta4-wh-Vja" id="gDx-bn-xDk"/>
                                 </connections>
                             </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Explored Places" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Cw-0O-uAr">
+                                <rect key="frame" x="15" y="88" width="231" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <color key="textColor" red="0.99763482810000004" green="0.75061158090000002" blue="0.31111527820000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <viewLayoutGuide key="safeArea" id="BuA-hT-stO"/>
@@ -234,7 +242,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Oe-db-5ZL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2774" y="21"/>
+            <point key="canvasLocation" x="2773.913043478261" y="20.758928571428569"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="hBS-uN-ujX">
@@ -302,7 +310,7 @@
     <resources>
         <image name="explored" width="24" height="26"/>
         <image name="map" width="26" height="25"/>
-        <image name="peta-1" width="600" height="683"/>
+        <image name="peta-1" width="784" height="784"/>
         <image name="scan" width="26" height="26"/>
     </resources>
     <inferredMetricsTieBreakers>
