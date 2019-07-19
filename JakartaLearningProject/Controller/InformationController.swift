@@ -18,7 +18,6 @@ class InformationController: UIViewController {
     @IBOutlet weak var informationLabel: UILabel!
     
     var data = loadData()
-//    var data:Data
     var selectedData:PlaceData? = nil
     var selectedIndex: Int = 0
     
@@ -33,7 +32,6 @@ class InformationController: UIViewController {
         informationLabel.text = data[selectedIndex].information
         
         self.navigationController?.setNavigationBarHidden(false, animated: true)
-//        data[0].description = ""
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {

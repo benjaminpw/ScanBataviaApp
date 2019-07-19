@@ -10,54 +10,40 @@ import UIKit
 
 class ExploreViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
-    var selectedData: Int = 0
+    @IBOutlet weak var collectionView: UICollectionView!
     
+    var unlockedImages: [UIImage] = [
+//        UIImage(named: "0")!,
+//        UIImage(named: "1")!,
+//        UIImage(named: "2")!,
+//        UIImage(named: "3")!,
+//        UIImage(named: "4")!,
+//        UIImage(named: "5")!,
+//        UIImage(named: "6")!
+    ]
+    
+    var lockedImages: [UIImage] = [
+
+    ]
+    
+    var selectedData: Int = 0
+    var selectedArray: [Int] = []
+    var data = loadData()
+    
+    
+    //Collection View Create
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return images.count
+        return unlockedImages.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "photoCell", for: indexPath) as! PhotoCell
         
-        let  image = images[indexPath.item]
+        let  image = unlockedImages[indexPath.item]
         cell.imageView.image = image
         cell.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tap(_:))))
         
         return cell
-    }
-    
-    @objc func tap(_ sender: UITapGestureRecognizer) {
-        let location = sender.location(in: self.collectionView)
-        let indexPath = self.collectionView.indexPathForItem(at: location)
-        
-        if let index = indexPath {
-            print("Got clicked on index: \(index)")
-            
-            if index == [0,0]{
-                print("yes")
-                selectedData = 0
-                self.performSegue(withIdentifier: "exploreSegue", sender: self)
-            } else if index == [0,1] {
-                selectedData = 1
-                self.performSegue(withIdentifier: "exploreSegue", sender: self)
-            } else if index == [0,2] {
-                selectedData = 2
-                self.performSegue(withIdentifier: "exploreSegue", sender: self)
-            } else if index == [0,3] {
-                selectedData = 3
-                self.performSegue(withIdentifier: "exploreSegue", sender: self)
-            } else if index == [0,4] {
-                selectedData = 4
-                self.performSegue(withIdentifier: "exploreSegue", sender: self)
-            } else if index == [0,5] {
-                selectedData = 5
-                self.performSegue(withIdentifier: "exploreSegue", sender: self)
-            } else if index == [0,6] {
-                selectedData = 6
-                self.performSegue(withIdentifier: "exploreSegue", sender: self)
-            }
-            
-        }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -69,18 +55,42 @@ class ExploreViewController: UIViewController, UICollectionViewDataSource, UICol
         return CGSize(width: (width / numberOfColumns) - (xInsets + cellSpacing), height: (width / numberOfColumns * 1.5) - (xInsets + cellSpacing))
     }
     
-    @IBOutlet weak var collectionView: UICollectionView!
+    //Collection View TapGesture
+    @objc func tap(_ sender: UITapGestureRecognizer) {
+        let location = sender.location(in: self.collectionView)
+        let indexPath = self.collectionView.indexPathForItem(at: location)
+        
+        if let index = indexPath {
+            print("Got clicked on index: \(index)")
+            
+            if index == [0,0]{
+                print("yes")
+                selectedData = selectedArray[0]
+                self.performSegue(withIdentifier: "exploreSegue", sender: self)
+            } else if index == [0,1] {
+                selectedData = selectedArray[1]
+                self.performSegue(withIdentifier: "exploreSegue", sender: self)
+            } else if index == [0,2] {
+                selectedData = selectedArray[2]
+                self.performSegue(withIdentifier: "exploreSegue", sender: self)
+            } else if index == [0,3] {
+                selectedData = selectedArray[3]
+                self.performSegue(withIdentifier: "exploreSegue", sender: self)
+            } else if index == [0,4] {
+                selectedData = selectedArray[4]
+                self.performSegue(withIdentifier: "exploreSegue", sender: self)
+            } else if index == [0,5] {
+                selectedData = selectedArray[5]
+                self.performSegue(withIdentifier: "exploreSegue", sender: self)
+            } else if index == [0,6] {
+                selectedData = selectedArray[6]
+                self.performSegue(withIdentifier: "exploreSegue", sender: self)
+            }
+            
+        }
+    }
     
-    let images: [UIImage] = [
-        UIImage(named: "0")!,
-        UIImage(named: "1")!,
-        UIImage(named: "2")!,
-        UIImage(named: "3")!,
-        UIImage(named: "4")!,
-        UIImage(named: "5")!,
-        UIImage(named: "6")!
-    ]
-    
+    //Segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "exploreSegue" {
             let destination = segue.destination as! InformationController
@@ -88,9 +98,24 @@ class ExploreViewController: UIViewController, UICollectionViewDataSource, UICol
         }
     }
     
+    //Separate locked & unlocked
+    func setupData() {
+        for index in 0...data.count-1 {
+            if data[index].isLocked == true {
+                lockedImages.append(UIImage(named: "\(index)")!)
+            } else if data[index].isLocked == false {
+                unlockedImages.append(UIImage(named: "\(index)")!)
+                selectedArray.append(index)
+                print("Unlocked = \(data[index].title)")
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.setNavigationBarHidden(true, animated: true)
+        setupData()
+//        print(" ExploredTest = \(data[0].isLocked)")
     }
     
     override func viewWillAppear(_ animated: Bool) {

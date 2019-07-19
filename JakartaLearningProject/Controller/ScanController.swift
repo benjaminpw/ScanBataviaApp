@@ -217,6 +217,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         try? VNImageRequestHandler(cvPixelBuffer: pixelBuffer, options: [:]).perform([request])
     }
     
+    //Segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "informationSegue" {
 //            let seguedData = data[scannedData]
@@ -226,16 +227,13 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
 //            print(scannedData)
         }
     }
-
-    //Timer
-    
-    
-    //Testing Purposes
     
     @IBAction func testButton(_ sender: Any) {
-        
         if tempScan != "Else" {
+            
             self.performSegue(withIdentifier:"informationSegue", sender: self)
+            data[scannedData].isLocked = false
+            print(data[scannedData].title, data[scannedData].isLocked)
         }
     }
     
