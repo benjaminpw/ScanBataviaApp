@@ -13,7 +13,9 @@ class InformationController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var summaryLabel: UILabel!
+    @IBOutlet weak var todoLabel: UILabel!
+    @IBOutlet weak var informationLabel: UILabel!
     
     var data = loadData()
 //    var data:Data
@@ -23,9 +25,13 @@ class InformationController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 //        print(data[selectedIndex].title)
+        
         image.image = UIImage(named: data[selectedIndex].image)
         titleLabel.text = data[selectedIndex].title
-        descriptionLabel.text = data[selectedIndex].description
+        summaryLabel.text = data[selectedIndex].summary
+        todoLabel.text = data[selectedIndex].todo
+        informationLabel.text = data[selectedIndex].information
+        
         self.navigationController?.setNavigationBarHidden(false, animated: true)
 //        data[0].description = ""
     }

@@ -11,13 +11,64 @@ import Foundation
 var data: [PlaceData] = []
 
 func loadData() -> [PlaceData] {
-    let data1: PlaceData = PlaceData(title: "Jakarta History Museum", description: "The Jakarta History Museum (Indonesian: Museum Sejarah Jakarta), also known as Fatahillah Museum or Batavia Museum, is located in the Old Town (known as Kota Tua) of Jakarta, Indonesia. The building was built in 1710 as the Stadhuis (city hall) of Batavia. Jakarta History Museum opened in 1974 and displays objects from the prehistory period of the city region, the founding of Jayakarta in 1527, and the Dutch colonization period from the 16th century until Indonesia’s Independence in 1945.", image: "0", thumbnail: "")
-    let data2: PlaceData = PlaceData(title: "The Bank Indonesia Museum", description: "Bank Indonesia Museum (Indonesian Museum Bank Indonesia) is a bank museum located in Jakarta, Indonesia. It was founded by Bank Indonesia and opened on 21 July 2009. The museum is housed in a heritage building in Jakarta Old Town that had been the first headquarters of the Netherlands Indies gulden (De Javasche bank), the central bank of the Dutch East Indies. The bank was nationalized as Bank Indonesia in 1953, after Indonesia gained its independence. It is located next to Bank Mandiri Museum.", image: "1", thumbnail: "")
-    let data3: PlaceData = PlaceData(title: "The Bank Mandiri Museum", description: "Bank Mandiri Museum (Indonesian Museum Bank Mandiri) is an economics museum located in the old banking district of Jakarta Old Town in northern Jakarta, Indonesia. The museum is housed in the former headquarters of the Netherlands Trading Society, one of the primary ancestor of ABN AMRO. The museum is closed on Mondays and public holidays. It is located next to Museum Bank Indonesia.", image: "2", thumbnail: "")
-    let data4: PlaceData = PlaceData(title: "The Wayang Museum", description: "The Wayang Museum (Indonesian: Museum Wayang) is a museum dedicated to Javan wayang puppetry. The museum is located in Kota Tua, Jakarta, Indonesia. It is one of several museums and galleries facing the Fatahillah Square, which include Jakarta History Museum, Fine Art and Ceramic Museum, and Kota Post Office art gallery.", image: "3", thumbnail: "")
-    let data5: PlaceData = PlaceData(title: "The Fine Arts and Ceramic Museum", description: "The building of the Fine Art and Ceramic Museum was completed on January 12, 1870, and was used as the Court of Justice (Dutch: de Raad van Justitie). The building was known as Paleis van Justitie. During the Japanese occupation, the building was used by KNIL and later after the independence of Indonesia, was used as the Indonesian military dormitory and as the logistic warehouse. In 1967, the building was used as the West Jakarta Mayor Office. In 1974, the building was used as an office for the Jakarta Museum and History Department. The building was officially inaugurated as the Fine Art and Ceramic museum by president Soeharto on August 20, 1976.", image: "4", thumbnail: "")
-    let data6: PlaceData = PlaceData(title: "Café Batavia", description: "Cafe Batavia is a restaurant located in Kota Tua (Old Town), Jakarta, Indonesia. It is one of the colonial landmarks facing the square Taman Fatahillah. The building where Cafe Batavia is established is the second oldest building in the square, second only to the former City Hall building of Batavia, which had been reestablished as the Jakarta History Museum.", image: "5", thumbnail: "")
-    let data7: PlaceData = PlaceData(title: "The Red Shop", description: "Toko Merah (Indonesian 'Red Shop') is a Dutch colonial landmark in Jakarta Old Town, Indonesia. Built in 1730, it is one of the oldest buildings in Jakarta. The building is located on the west side of the main canal Kali Besar. The building's red color contributes to its current name.", image: "6", thumbnail: "")
+    let data1: PlaceData = PlaceData(title: "Jakarta History Museum", summary: "This building was once the city hall of Batavia (Dutch: Stadhuis van Batavia) which was built in 1707-1712 at the behest of the Governor-General Joan van Hoorn. On March 30, 1974, the building was later inaugurated as the Fatahillah Museum.", todo: """
+        This Oud Batavia Museum features Dutch relics that settled in Batavia since the beginning of the XVI century. The collection consists of:
+
+        1. Furniture
+        2. Household furniture
+        3. Weapons
+        4. Ceramics
+        5. Map
+        6. Books
+        """, information: """
+        Work Hour
+        Tue-Sun = 09.00-15.00 WIB
+        Ticket Price:
+        Child = Rp600
+        College Student = Rp1.000
+        Adult = Rp2000
+        """, link: "https://id.wikipedia.org/wiki/Museum_Fatahillah", location: "", image: "0", thumbnail: "")
+    let data2: PlaceData = PlaceData(title: "The Bank Indonesia Museum", summary: "The Bank Indonesia Museum is a museum in Jakarta, Indonesia, located on Jl. Pintu Besar Utara No.3, West Jakarta (in front of Beos Kota Station), by occupying the former area of ​​the Bank Indonesia City building which is a neo-classical cultural heritage of De Javasche Bank.", todo: """
+        The museum provided information on how the Dutch East Indies monopolized the spice trade in the Indonesian archipelago, the Dutch East Indies banking system, currency conditions when Indonesia during the Japanese occupation until the 1997 economic crisis which became one of the causes of the May 1998 riots, a factor causing the collapse of the Orde Baru and downfall of the Suharto regime.
+
+        Note:
+        You can deposit your items in the locker room
+        """, information: """
+        Work Hour
+        Open everyday except Monday
+        Tue-Fri = 08.00-15.30 WIB
+        Sat-Sun = 08.00-16.00 WIB
+        Free Entry
+        """, link: "https://id.wikipedia.org/wiki/Museum_Bank_Indonesia", location: "", image: "1", thumbnail: "")
+    let data3: PlaceData = PlaceData(title: "The Bank Mandiri Museum", summary: "The Bank Mandiri Museum was built in 1998, at the beginning this building was Nederlandsche Handel-Maatschappij (NHM), NHM was Dutch Trading Company, and develop to be company in the banking sector.", todo: """
+        The collection consist of many things that relate to banking activity and also its development
+        """, information: """
+        Work Hour
+        Tue-Sunday = 09.00-16.00 WIB
+        Monday and Public Holiday are closed
+        Rp 2.000,00
+        Free entry for Students, and Mandiri Banks customers
+        """, link: "https://id.wikipedia.org/wiki/Museum_Bank_Mandiri", location: "", image: "2", thumbnail: "")
+    let data4: PlaceData = PlaceData(title: "The Wayang Museum", summary: "The wayang Museum was built in 1640 under the name of the old Dutch Chruch. After the independence of Indonesia, the building was transferred to the Institute of Indonesian Culture.", todo: """
+        The museum has a collection of various kind of Wayang, such as Javanese Wayang Kulit and Sundanese Wayang Golek. It has more than 5000 of wayangs collection
+        """, information: """
+        Work Hour:
+        Everyday = 09.00-15.00 WIB
+        Average Cost: Rp 5000,00 per person
+        """, link: "https://en.wikipedia.org/wiki/Wayang_Museum", location: "", image: "3", thumbnail: "")
+    let data5: PlaceData = PlaceData(title: "The Fine Arts and Ceramic Museum", summary: "The Fine Arts and Ceramic Museum was built in 1870, this building was used by Hindia Belanda government for Office of Justice Council at the Fortrees of Batavia (Ordinaris Raad van Justitie Binnen Het Kasteel Batavia). In 1990 this building used for The Fine Arts and Ceramic Museum.", todo: """
+        The Facility in this building are Library, Arts museum, it provides book collection of Arts, and ceramics, and also there are Accesories Store, sells many Art things, from painting, ceramics, and earthenware.
+        """, information: "", link: "", location: "", image: "4", thumbnail: "")
+    let data6: PlaceData = PlaceData(title: "Café Batavia", summary: "In the beginning this cafe building was the residence of Dutch officials starting in 1850, then in 1993, the building was purchased by an Australian citizen named Graham James who made this building a fine dining restaurant.\nThere is one spot that is very interesting and becomes the prey of visitors, namely the wall on the second floor. There are around thousands of photo frames that are neatly displayed. All photos are private collections of cafe owners.", todo: """
+        There is one spot that is very interesting and becomes the prey of visitors, namely the wall on the second floor. There are around thousands of photo frames that are neatly displayed. All photos are private collections of cafe owners.
+        """, information: """
+        Work Hour:
+        Mon-Thu, Sun = 08.00-00.00 WIB
+        Fri-Sat = 08.00-01.00 WIB
+        Average Cost:
+        Rp300.000 for two people
+        """, link: "https://en.wikipedia.org/wiki/Cafe_Batavia", location: "", image: "5", thumbnail: "")
+    let data7: PlaceData = PlaceData(title: "The Red Shop", summary: "Toko Merah (Indonesian 'Red Shop') is a Dutch colonial landmark in Jakarta Old Town, Indonesia. Built in 1730, it is one of the oldest buildings in Jakarta. The building is located on the west side of the main canal Kali Besar. The building's red color contributes to its current name.", todo: "", information: "", link: "", location: "", image: "6", thumbnail: "")
     
     data = [data1, data2, data3, data4, data5, data6, data7]
     return data
@@ -25,7 +76,11 @@ func loadData() -> [PlaceData] {
 
 struct PlaceData {
     var title: String
-    var description: String
+    var summary: String
+    var todo: String
+    var information: String
+    var link:String
+    var location: String
     var image: String
     var thumbnail :String
 }
