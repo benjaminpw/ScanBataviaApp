@@ -232,8 +232,8 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         if tempScan != "Else" {
             
             self.performSegue(withIdentifier:"informationSegue", sender: self)
-            data[scannedData].isLocked = false
-            print(data[scannedData].title, data[scannedData].isLocked)
+            data[scannedData].isUnlocked = false
+            print(data[scannedData].title, data[scannedData].isUnlocked)
         }
     }
     

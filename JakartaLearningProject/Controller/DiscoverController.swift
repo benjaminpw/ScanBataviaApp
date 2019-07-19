@@ -18,7 +18,7 @@ class MapController: UIViewController, UIScrollViewDelegate {
         super.viewDidLoad()
         self.scrollView.minimumZoomScale = 1.0
         self.scrollView.maximumZoomScale = 4.0
-        data[0].isLocked = false
+        data[0].isUnlocked = false
         
     }
     

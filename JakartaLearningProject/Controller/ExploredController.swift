@@ -101,9 +101,9 @@ class ExploreViewController: UIViewController, UICollectionViewDataSource, UICol
     //Separate locked & unlocked
     func setupData() {
         for index in 0...data.count-1 {
-            if data[index].isLocked == true {
+            if data[index].isUnlocked == false {
                 lockedImages.append(UIImage(named: "\(index)")!)
-            } else if data[index].isLocked == false {
+            } else if data[index].isUnlocked == true {
                 unlockedImages.append(UIImage(named: "\(index)")!)
                 selectedArray.append(index)
                 print("Unlocked = \(data[index].title)")
