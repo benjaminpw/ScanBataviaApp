@@ -61,10 +61,9 @@ class ExploreViewController: UIViewController, UICollectionViewDataSource, UICol
         let indexPath = self.collectionView.indexPathForItem(at: location)
         
         if let index = indexPath {
-            print("Got clicked on index: \(index)")
+            print("Explored index: \(index)")
             
             if index == [0,0]{
-                print("yes")
                 selectedData = selectedArray[0]
                 self.performSegue(withIdentifier: "exploreSegue", sender: self)
             } else if index == [0,1] {
