@@ -152,8 +152,8 @@
 		8BC9B6D922E21A0000F36F01 /* Collection */ = {
 			isa = PBXGroup;
 			children = (
-				8BC9B6DA22E21A1B00F36F01 /* JakPusCollection.swift */,
 				8BC9B6DC22E21A3300F36F01 /* KotuCollection.swift */,
+				8BC9B6DA22E21A1B00F36F01 /* JakPusCollection.swift */,
 			);
 			path = Collection;
 			sourceTree = "<group>";

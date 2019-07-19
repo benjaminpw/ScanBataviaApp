@@ -24,11 +24,11 @@ class DiscoverTable: UITableView, UITableViewDelegate, UITableViewDataSource {
         
         if  row == 0 {
             let  cell = tableView.dequeueReusableCell(withIdentifier: "kotutableviewcell") as! KotuTableViewCell
-            
+            cell.selectionStyle = .none
             return cell
         } else {
             let  cell = tableView.dequeueReusableCell(withIdentifier: "jakpustableviewcell") as! JakpusTableViewCell
-            
+            cell.selectionStyle = .none
             return cell
         }
     }

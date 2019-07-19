@@ -43,6 +43,8 @@ class JakPusCollection: UICollectionView, UICollectionViewDataSource, UICollecti
         
         return cell
     }
+    
+    
 }
 
 

@@ -10,7 +10,6 @@ import UIKit
 
 class KotuCell: UICollectionViewCell {
     @IBOutlet weak var kotuImage: UIImageView!
-    
     @IBOutlet weak var kotuLabel: UILabel!
 }
 

@@ -65,27 +65,20 @@ class ExploreViewController: UIViewController, UICollectionViewDataSource, UICol
             
             if index == [0,0]{
                 selectedData = selectedArray[0]
-                self.performSegue(withIdentifier: "exploreSegue", sender: self)
             } else if index == [0,1] {
                 selectedData = selectedArray[1]
-                self.performSegue(withIdentifier: "exploreSegue", sender: self)
             } else if index == [0,2] {
                 selectedData = selectedArray[2]
-                self.performSegue(withIdentifier: "exploreSegue", sender: self)
             } else if index == [0,3] {
                 selectedData = selectedArray[3]
-                self.performSegue(withIdentifier: "exploreSegue", sender: self)
             } else if index == [0,4] {
                 selectedData = selectedArray[4]
-                self.performSegue(withIdentifier: "exploreSegue", sender: self)
             } else if index == [0,5] {
                 selectedData = selectedArray[5]
-                self.performSegue(withIdentifier: "exploreSegue", sender: self)
             } else if index == [0,6] {
                 selectedData = selectedArray[6]
-                self.performSegue(withIdentifier: "exploreSegue", sender: self)
             }
-            
+            self.performSegue(withIdentifier: "exploreSegue", sender: self)
         }
     }
     

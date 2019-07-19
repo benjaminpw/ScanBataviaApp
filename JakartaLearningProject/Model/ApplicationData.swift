@@ -27,7 +27,7 @@ func loadData() -> [PlaceData] {
         Child = Rp600
         College Student = Rp1.000
         Adult = Rp2000
-        """, link: "https://id.wikipedia.org/wiki/Museum_Fatahillah", location: "", image: "0", thumbnail: "", isUnlocked: true)
+        """, link: "https://id.wikipedia.org/wiki/Museum_Fatahillah", location: "", image: "0", thumbnail: "", isUnlocked: false)
     let data2: PlaceData = PlaceData(title: "The Bank Indonesia Museum", summary: "The Bank Indonesia Museum is a museum in Jakarta, Indonesia, located on Jl. Pintu Besar Utara No.3, West Jakarta (in front of Beos Kota Station), by occupying the former area of ​​the Bank Indonesia City building which is a neo-classical cultural heritage of De Javasche Bank.", todo: """
         The museum provided information on how the Dutch East Indies monopolized the spice trade in the Indonesian archipelago, the Dutch East Indies banking system, currency conditions when Indonesia during the Japanese occupation until the 1997 economic crisis which became one of the causes of the May 1998 riots, a factor causing the collapse of the Orde Baru and downfall of the Suharto regime.
 
@@ -55,7 +55,7 @@ func loadData() -> [PlaceData] {
         Work Hour:
         Everyday = 09.00-15.00 WIB
         Average Cost: Rp 5000,00 per person
-        """, link: "https://en.wikipedia.org/wiki/Wayang_Museum", location: "", image: "3", thumbnail: "", isUnlocked: true)
+        """, link: "https://en.wikipedia.org/wiki/Wayang_Museum", location: "", image: "3", thumbnail: "", isUnlocked: false)
     let data5: PlaceData = PlaceData(title: "The Fine Arts and Ceramic Museum", summary: "The Fine Arts and Ceramic Museum was built in 1870, this building was used by Hindia Belanda government for Office of Justice Council at the Fortrees of Batavia (Ordinaris Raad van Justitie Binnen Het Kasteel Batavia). In 1990 this building used for The Fine Arts and Ceramic Museum.", todo: """
         The Facility in this building are Library, Arts museum, it provides book collection of Arts, and ceramics, and also there are Accesories Store, sells many Art things, from painting, ceramics, and earthenware.
         """, information: "", link: "", location: "", image: "4", thumbnail: "", isUnlocked: true)
@@ -67,7 +67,7 @@ func loadData() -> [PlaceData] {
         Fri-Sat = 08.00-01.00 WIB
         Average Cost:
         Rp300.000 for two people
-        """, link: "https://en.wikipedia.org/wiki/Cafe_Batavia", location: "", image: "5", thumbnail: "", isUnlocked: true)
+        """, link: "https://en.wikipedia.org/wiki/Cafe_Batavia", location: "", image: "5", thumbnail: "", isUnlocked: false)
     let data7: PlaceData = PlaceData(title: "The Red Shop", summary: "Toko Merah (Indonesian 'Red Shop') is a Dutch colonial landmark in Jakarta Old Town, Indonesia. Built in 1730, it is one of the oldest buildings in Jakarta. The building is located on the west side of the main canal Kali Besar. The building's red color contributes to its current name.", todo: "", information: "", link: "", location: "", image: "6", thumbnail: "", isUnlocked: true)
     
     data = [data1, data2, data3, data4, data5, data6, data7]
