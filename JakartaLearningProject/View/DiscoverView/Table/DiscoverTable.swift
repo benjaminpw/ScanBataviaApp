@@ -7,8 +7,10 @@
 //
 
 import UIKit
+var tableCellSelected:Int = 0
 
 class DiscoverTable: UITableView, UITableViewDelegate, UITableViewDataSource {
+    @IBOutlet weak var collectionViewOutlet: KotuCollection!
     
     override func awakeFromNib() {
         self.delegate = self
@@ -25,14 +27,18 @@ class DiscoverTable: UITableView, UITableViewDelegate, UITableViewDataSource {
         if  row == 0 {
             let  cell = tableView.dequeueReusableCell(withIdentifier: "kotutableviewcell") as! KotuTableViewCell
             cell.selectionStyle = .none
+//            cell.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tap(_:))))
             return cell
         } else {
             let  cell = tableView.dequeueReusableCell(withIdentifier: "jakpustableviewcell") as! JakpusTableViewCell
             cell.selectionStyle = .none
+//            cell.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tap(_:))))
             return cell
         }
     }
     
-    
+    @objc func tap(_ sender: UITapGestureRecognizer) {
+        print("selected")
+    }
     
 }

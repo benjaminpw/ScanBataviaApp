@@ -12,6 +12,7 @@ class MapController: UIViewController, UIScrollViewDelegate {
 
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var imageView: UIImageView!
+    var selectedMap:String = "peta-1"
     var data = loadData()
     
     override func viewDidLoad() {
@@ -19,18 +20,21 @@ class MapController: UIViewController, UIScrollViewDelegate {
         self.scrollView.minimumZoomScale = 1.0
         self.scrollView.maximumZoomScale = 4.0
         data[0].isUnlocked = false
+        imageView.image = UIImage(named: selectedMap)
         
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
     func viewForZooming(in scrollView: UIScrollView) -> UIView? {
         return self.imageView
     }
     
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
-    }
 
 }

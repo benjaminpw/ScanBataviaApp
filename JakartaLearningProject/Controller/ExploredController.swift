@@ -12,24 +12,12 @@ class ExploreViewController: UIViewController, UICollectionViewDataSource, UICol
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var unlockedImages: [UIImage] = [
-//        UIImage(named: "0")!,
-//        UIImage(named: "1")!,
-//        UIImage(named: "2")!,
-//        UIImage(named: "3")!,
-//        UIImage(named: "4")!,
-//        UIImage(named: "5")!,
-//        UIImage(named: "6")!
-    ]
-    
-    var lockedImages: [UIImage] = [
-
-    ]
+    var unlockedImages: [UIImage] = []
+    var lockedImages: [UIImage] = []
     
     var selectedData: Int = 0
     var selectedArray: [Int] = []
     var data = loadData()
-    
     
     //Collection View Create
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -38,7 +26,6 @@ class ExploreViewController: UIViewController, UICollectionViewDataSource, UICol
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "photoCell", for: indexPath) as! PhotoCell
-        
         let  image = unlockedImages[indexPath.item]
         cell.imageView.image = image
         cell.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tap(_:))))
