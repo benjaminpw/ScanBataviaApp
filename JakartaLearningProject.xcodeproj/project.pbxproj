@@ -27,6 +27,7 @@
 		8BC9B6E522E21A9900F36F01 /* JakPusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC9B6E422E21A9900F36F01 /* JakPusCell.swift */; };
 		8BC9B6E722E21AAB00F36F01 /* KotuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC9B6E622E21AAB00F36F01 /* KotuCell.swift */; };
 		8BC9B6EB22E21C8500F36F01 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC9B6EA22E21C8500F36F01 /* DiscoverViewController.swift */; };
+		8BC9B6F122E3436600F36F01 /* DiscoverInformationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC9B6F022E3436600F36F01 /* DiscoverInformationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		8BC9B6E422E21A9900F36F01 /* JakPusCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JakPusCell.swift; sourceTree = "<group>"; };
 		8BC9B6E622E21AAB00F36F01 /* KotuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KotuCell.swift; sourceTree = "<group>"; };
 		8BC9B6EA22E21C8500F36F01 /* DiscoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
+		8BC9B6F022E3436600F36F01 /* DiscoverInformationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverInformationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				8B03A2BF22DC91BF00BF35FD /* InformationController.swift */,
 				8BC9B6EA22E21C8500F36F01 /* DiscoverViewController.swift */,
 				8B03A2BD22DC91A300BF35FD /* DiscoverMapController.swift */,
+				8BC9B6F022E3436600F36F01 /* DiscoverInformationController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 				8B03A2CF22DF06BC00BF35FD /* MLKotaTuaV4.mlmodel in Sources */,
 				8B03A2BE22DC91A300BF35FD /* DiscoverMapController.swift in Sources */,
 				8B03A2D722E06BE000BF35FD /* PhotoCell.swift in Sources */,
+				8BC9B6F122E3436600F36F01 /* DiscoverInformationController.swift in Sources */,
 				8BC9B6EB22E21C8500F36F01 /* DiscoverViewController.swift in Sources */,
 				8BC9B6E522E21A9900F36F01 /* JakPusCell.swift in Sources */,
 				8BC9B6E022E21A5B00F36F01 /* KotuTableViewCell.swift in Sources */,

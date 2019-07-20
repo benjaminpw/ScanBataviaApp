@@ -56,7 +56,7 @@ class KotuCollection: UICollectionView, UICollectionViewDataSource, UICollection
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        openCity = name[indexPath.row]
+        openCity = "\(indexPath.row)"
         open()
     }
     

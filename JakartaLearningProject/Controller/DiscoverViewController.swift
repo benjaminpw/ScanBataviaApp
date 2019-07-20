@@ -14,11 +14,14 @@ protocol DiscoverDelegate : AnyObject{
 class DiscoverViewController: UIViewController, DiscoverDelegate {
     
     var tableCellSelected:Int = 0
+    var segueIndex:Int = 0
 
     @IBOutlet weak var collectionViewOutlet: KotuCollection!
     
     var data = loadData()
     var selectedForMaps: String = ""
+    var selectedCollection: Int = 0
+    var tempString:String = ""
     @IBOutlet weak var tableView : UITableView!
     @IBAction func kotaTuaButton(_ sender: Any) {
         selectedForMaps = "KotaTuaMap"
@@ -54,13 +57,29 @@ class DiscoverViewController: UIViewController, DiscoverDelegate {
             let destination = segue.destination as! MapController
             destination.selectedMap = selectedForMaps
         }
+        else if segue.identifier == "discoverInformationSegue" {
+            let destination = segue.destination as! DiscoverInformationController
+            destination.selectedIndex = selectedCollection
+        }
     }
     
     func openCity(_ city: String) {
         print(#function)
-        selectedForMaps = city
-        performSegue(withIdentifier: "discoverMapSegue", sender: self)
+        selectIndex()
+        tempString = city
+        print(tempString)
+        performSegue(withIdentifier: "discoverInformationSegue", sender: self)
+        
     }
+    
+    func selectIndex() {
+        for index in 0...data.count-1 {
+            if tempString == data[index].title {
+                segueIndex = index
+            }
+        }
+    }
+    
 }
 
 extension DiscoverViewController :UITableViewDelegate, UITableViewDataSource{
