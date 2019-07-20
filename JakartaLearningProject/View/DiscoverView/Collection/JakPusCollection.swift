@@ -11,11 +11,11 @@ import UIKit
 class JakPusCollection: UICollectionView, UICollectionViewDataSource, UICollectionViewDelegate {
     
     let images: [UIImage] = [
-        UIImage(named: "1")!,
-        UIImage(named: "2")!,
-        UIImage(named: "3")!,
-        UIImage(named: "4")!,
-        UIImage(named: "5")!
+        UIImage(named: "monas-1")!,
+        UIImage(named: "monas-2")!,
+        UIImage(named: "monas-3")!,
+        UIImage(named: "monas-4")!,
+        UIImage(named: "monas-5")!
     ]
     
     let name = [
