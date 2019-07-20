@@ -19,6 +19,7 @@ class DiscoverInformationController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(selectedIndex)
         image.image = UIImage(named: data[selectedIndex].image)
         titleLabel.text = data[selectedIndex].title
         informationLabel.text = data[selectedIndex].information
