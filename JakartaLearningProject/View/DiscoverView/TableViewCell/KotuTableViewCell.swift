@@ -10,6 +10,8 @@ import UIKit
 
 class KotuTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var collectionOutlet: KotuCollection!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -22,3 +24,4 @@ class KotuTableViewCell: UITableViewCell {
     }
     
 }
+

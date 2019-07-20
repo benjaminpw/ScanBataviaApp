@@ -8,13 +8,13 @@
 
 import UIKit
 
-class KotuCollection: UICollectionView, UICollectionViewDataSource, UICollectionViewDelegate/*, DiscoverDelegate*/ {
+class KotuCollection: UICollectionView, UICollectionViewDataSource, UICollectionViewDelegate, DiscoverDelegate {
     
-//    func openCity(_ city: String) {
-//
-//    }
+    func openCity(_ city: String) {
+
+    }
     
-//    weak var delegate2 : DiscoverDelegate?
+    weak var delegate2 : DiscoverDelegate?
     var openCity : String?
     
     let images: [UIImage] = [
@@ -55,12 +55,13 @@ class KotuCollection: UICollectionView, UICollectionViewDataSource, UICollection
         return cell
     }
     
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        openCity = name[indexPath.row]
-//        open()
-//    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        openCity = name[indexPath.row]
+        open()
+    }
     
-//    func open(){
-//        delegate2?.openCity(openCity!)
-//    }
+    
+    func open(){
+        delegate2!.openCity(openCity!)
+    }
 }
