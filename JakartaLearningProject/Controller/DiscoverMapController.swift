@@ -12,14 +12,13 @@ class MapController: UIViewController, UIScrollViewDelegate {
 
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var imageView: UIImageView!
-    var selectedMap:String = "peta-1"
+    var selectedMap:String = ""
     var data = loadData()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.scrollView.minimumZoomScale = 1.0
         self.scrollView.maximumZoomScale = 4.0
-        data[0].isUnlocked = false
         imageView.image = UIImage(named: selectedMap)
         
     }

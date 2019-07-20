@@ -58,7 +58,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OgL-3t-3qx">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="peta-1" translatesAutoresizingMaskIntoConstraints="NO" id="umf-Dj-Xva">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="KotaTuaMap" translatesAutoresizingMaskIntoConstraints="NO" id="umf-Dj-Xva">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                                     </imageView>
                                 </subviews>
@@ -510,6 +510,13 @@
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D59-EM-QCN">
+                                                    <rect key="frame" x="20" y="11" width="374" height="275"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <connections>
+                                                        <action selector="monasButton:" destination="DfK-dT-fMl" eventType="touchUpInside" id="gC2-GO-b9p"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </tableViewCellContentView>
@@ -563,9 +570,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="KotaTuaMap" width="842" height="1191"/>
         <image name="explored" width="24" height="26"/>
         <image name="map" width="26" height="25"/>
-        <image name="peta-1" width="842" height="1191"/>
         <image name="scan" width="26" height="26"/>
     </resources>
     <inferredMetricsTieBreakers>

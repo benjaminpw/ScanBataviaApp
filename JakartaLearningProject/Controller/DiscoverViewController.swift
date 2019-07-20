@@ -13,17 +13,24 @@ import UIKit
 
 class DiscoverViewController: UIViewController/*, DiscoverDelegate*/ {
     
-    @IBOutlet weak var tableView: DiscoverTable!
     var data = loadData()
-    
+    var selectedForMaps: String = ""
+    @IBOutlet weak var tableView: DiscoverTable!
     @IBAction func kotaTuaButton(_ sender: Any) {
-        performSegue(withIdentifier: "discoverMapSegue", sender: self)
+        selectedForMaps = "KotaTuaMap"
+        if selectedForMaps == "KotaTuaMap" {
+            performSegue(withIdentifier: "discoverMapSegue", sender: self)
+        }
+    }
+    @IBAction func monasButton(_ sender: Any) {
+        selectedForMaps = "MonasMap"
+        if selectedForMaps == "MonasMap" {
+            performSegue(withIdentifier: "discoverMapSegue", sender: self)
+        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -39,14 +46,14 @@ class DiscoverViewController: UIViewController/*, DiscoverDelegate*/ {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "discoverMapSegue" {
             let destination = segue.destination as! MapController
-            destination.selectedMap = "peta-1"
+            destination.selectedMap = selectedForMaps
         }
     }
     
-    func openCity(_ city: String) {
-        
-        performSegue(withIdentifier: "discoverMapSegue", sender: self)
-    }
+//    func openCity(_ city: String) {
+//
+//        performSegue(withIdentifier: "discoverMapSegue", sender: self)
+//    }
 }
 
 //extension DiscoverViewController :UITableViewDelegate, UITableViewDataSource{
