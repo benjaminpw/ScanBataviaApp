@@ -92,13 +92,16 @@ class ExploreViewController: UIViewController, UICollectionViewDataSource, UICol
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.setNavigationBarHidden(true, animated: true)
+//        self.navigationController?.setNavigationBarHidden(true, animated: true)
+//        navigationController?.navigationBar.prefersLargeTitles = true
+        self.title = "Explored Places"
         setupData()
 //        print(" ExploredTest = \(data[0].isLocked)")
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.setNavigationBarHidden(true, animated: true)
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {

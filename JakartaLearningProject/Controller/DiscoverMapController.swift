@@ -20,6 +20,8 @@ class MapController: UIViewController, UIScrollViewDelegate {
         self.scrollView.minimumZoomScale = 1.0
         self.scrollView.maximumZoomScale = 4.0
         imageView.image = UIImage(named: selectedMap)
+        navigationController?.navigationBar.prefersLargeTitles = true
+        self.title = selectedMap
         
     }
     

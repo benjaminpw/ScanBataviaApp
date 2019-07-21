@@ -55,7 +55,7 @@ func loadData() -> [PlaceData] {
         Work Hour:
         Everyday = 09.00-15.00 WIB
         Average Cost: Rp 5000,00 per person
-        """, link: "https://en.wikipedia.org/wiki/Wayang_Museum", location: "", image: "3", thumbnail: "", isUnlocked: false)
+        """, link: "https://en.wikipedia.org/wiki/Wayang_Museum", location: "", image: "3", thumbnail: "", isUnlocked: true)
     let data5: PlaceData = PlaceData(title: "The Fine Arts and Ceramic Museum", summary: "The Fine Arts and Ceramic Museum was built in 1870, this building was used by Hindia Belanda government for Office of Justice Council at the Fortrees of Batavia (Ordinaris Raad van Justitie Binnen Het Kasteel Batavia). In 1990 this building used for The Fine Arts and Ceramic Museum.", todo: """
         The Facility in this building are Library, Arts museum, it provides book collection of Arts, and ceramics, and also there are Accesories Store, sells many Art things, from painting, ceramics, and earthenware.
         """, information: "", link: "", location: "", image: "4", thumbnail: "", isUnlocked: true)
@@ -67,7 +67,7 @@ func loadData() -> [PlaceData] {
         Fri-Sat = 08.00-01.00 WIB
         Average Cost:
         Rp300.000 for two people
-        """, link: "https://en.wikipedia.org/wiki/Cafe_Batavia", location: "", image: "5", thumbnail: "", isUnlocked: false)
+        """, link: "https://en.wikipedia.org/wiki/Cafe_Batavia", location: "", image: "5", thumbnail: "", isUnlocked: true)
     let data7: PlaceData = PlaceData(title: "The Red Shop", summary: "Toko Merah (Indonesian 'Red Shop') is a Dutch colonial landmark in Jakarta Old Town, Indonesia. Built in 1730, it is one of the oldest buildings in Jakarta. The building is located on the west side of the main canal Kali Besar. The building's red color contributes to its current name.", todo: "", information: "", link: "", location: "", image: "6", thumbnail: "", isUnlocked: true)
     
     data = [data1, data2, data3, data4, data5, data6, data7]

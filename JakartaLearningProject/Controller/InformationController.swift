@@ -24,7 +24,6 @@ class InformationController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 //        print(data[selectedIndex].title)
-        
         image.image = UIImage(named: data[selectedIndex].image)
         titleLabel.text = data[selectedIndex].title
         summaryLabel.text = data[selectedIndex].summary
@@ -32,7 +31,12 @@ class InformationController: UIViewController {
         informationLabel.text = data[selectedIndex].information
         
         self.navigationController?.setNavigationBarHidden(false, animated: true)
+//        navigationController?.navigationBar.prefersLargeTitles = false
     }
+    
+//    override func viewWillAppear(_ animated: Bool) {
+//        self.navigationController?.navigationBar.topItem?.title = "Profile Settings"
+//    }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent

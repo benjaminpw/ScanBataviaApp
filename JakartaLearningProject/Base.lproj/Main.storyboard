@@ -37,7 +37,7 @@
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="JcN-X3-Una"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="JcN-X3-Una"/>
                     <connections>
                         <outlet property="identifierLabel" destination="lr9-ma-gia" id="7Q0-LN-4mB"/>
                         <segue destination="oSA-Pi-IFS" kind="show" identifier="informationSegue" id="bte-hw-v0f"/>
@@ -58,7 +58,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OgL-3t-3qx">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="KotaTuaMap" translatesAutoresizingMaskIntoConstraints="NO" id="umf-Dj-Xva">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Kota Tua Map" translatesAutoresizingMaskIntoConstraints="NO" id="umf-Dj-Xva">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                                     </imageView>
                                 </subviews>
@@ -214,7 +214,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="QWV-aQ-ebS"/>
                     </view>
-                    <navigationItem key="navigationItem" id="UNM-Ta-cWl"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="UNM-Ta-cWl"/>
                     <size key="freeformSize" width="414" height="1000"/>
                     <connections>
                         <outlet property="image" destination="1TJ-P8-Fk8" id="WlG-cY-mJN"/>
@@ -286,8 +286,8 @@
                                     <outlet property="delegate" destination="ta4-wh-Vja" id="gDx-bn-xDk"/>
                                 </connections>
                             </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Explored Places" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Cw-0O-uAr">
-                                <rect key="frame" x="15" y="88" width="252" height="41"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Cw-0O-uAr">
+                                <rect key="frame" x="15" y="88" width="0.0" height="0.0"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
                                 <color key="textColor" red="0.99763482810000004" green="0.75061158090000002" blue="0.31111527820000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -331,11 +331,11 @@
         <!--Explored-->
         <scene sceneID="0OI-Qn-LAM">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PFX-5S-duh" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="PFX-5S-duh" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Explored" image="explored" id="G45-2Z-KRw"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="blackTranslucent" id="l44-Us-zmv">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="blackTranslucent" largeTitles="YES" id="l44-Us-zmv">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" cocoaTouchSystemColor="darkTextColor"/>
                     </navigationBar>
@@ -532,8 +532,8 @@
                                     <outlet property="delegate" destination="DfK-dT-fMl" id="GLg-O0-3Iw"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Discover" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Slb-RA-pXL">
-                                <rect key="frame" x="20" y="88" width="139" height="41"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Slb-RA-pXL">
+                                <rect key="frame" x="20" y="88" width="0.0" height="0.0"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
                                 <color key="textColor" red="0.99763482810000004" green="0.75061158090000002" blue="0.31111527820000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -657,7 +657,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jA1-pH-XSF"/>
                     </view>
-                    <navigationItem key="navigationItem" id="VrX-dz-u5H"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="VrX-dz-u5H"/>
                     <size key="freeformSize" width="414" height="800"/>
                     <connections>
                         <outlet property="image" destination="jmF-Cx-1Io" id="dNQ-BW-4CE"/>
@@ -671,7 +671,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="KotaTuaMap" width="842" height="1191"/>
+        <image name="Kota Tua Map" width="842" height="1191"/>
         <image name="explored" width="24" height="26"/>
         <image name="map" width="26" height="25"/>
         <image name="scan" width="26" height="26"/>

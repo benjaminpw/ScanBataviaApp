@@ -24,14 +24,14 @@ class DiscoverViewController: UIViewController, DiscoverDelegate {
     var tempString:String = ""
     @IBOutlet weak var tableView : UITableView!
     @IBAction func kotaTuaButton(_ sender: Any) {
-        selectedForMaps = "KotaTuaMap"
-        if selectedForMaps == "KotaTuaMap" {
+        selectedForMaps = "Kota Tua Map"
+        if selectedForMaps == "Kota Tua Map" {
             performSegue(withIdentifier: "discoverMapSegue", sender: self)
         }
     }
     @IBAction func monasButton(_ sender: Any) {
-        selectedForMaps = "MonasMap"
-        if selectedForMaps == "MonasMap" {
+        selectedForMaps = "Monas Map"
+        if selectedForMaps == "Monas Map" {
             performSegue(withIdentifier: "discoverMapSegue", sender: self)
         }
     }
@@ -40,10 +40,13 @@ class DiscoverViewController: UIViewController, DiscoverDelegate {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        
+        navigationController?.navigationBar.prefersLargeTitles = true
+        self.title = "Discover"
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.setNavigationBarHidden(true, animated: true)
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -66,7 +69,7 @@ class DiscoverViewController: UIViewController, DiscoverDelegate {
     func openCity(_ city: String) {
         print(#function)
         tempString = city
-        print(tempString)
+//        print(tempString)
         if segueIndex >= 0 {
             selectIndex()
             performSegue(withIdentifier: "discoverInformationSegue", sender: self)
