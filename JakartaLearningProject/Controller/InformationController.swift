@@ -13,9 +13,8 @@ class InformationController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var summaryLabel: UILabel!
-    @IBOutlet weak var todoLabel: UILabel!
-    @IBOutlet weak var informationLabel: UILabel!
+    @IBOutlet weak var tipsLabel: UILabel!
+    @IBOutlet weak var historyLabel: UILabel!
     
     var data = loadData()
     var selectedData:PlaceData? = nil
@@ -26,10 +25,8 @@ class InformationController: UIViewController {
 //        print(data[selectedIndex].title)
         image.image = UIImage(named: data[selectedIndex].image)
         titleLabel.text = data[selectedIndex].title
-        summaryLabel.text = data[selectedIndex].summary
-        todoLabel.text = data[selectedIndex].todo
-        informationLabel.text = data[selectedIndex].information
-        
+        tipsLabel.text = data[selectedIndex].tips
+        historyLabel.text = data[selectedIndex].summary
         self.navigationController?.setNavigationBarHidden(false, animated: true)
 //        navigationController?.navigationBar.prefersLargeTitles = false
     }
