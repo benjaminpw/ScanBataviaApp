@@ -11,13 +11,14 @@ import UIKit
 class ExploreViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     @IBOutlet weak var collectionView: UICollectionView!
-    
+
     var unlockedImages: [UIImage] = []
     var lockedImages: [UIImage] = []
     
     var selectedData: Int = 0
     var selectedArray: [Int] = []
     var data = loadData()
+    var tempString: String = ""
     
     //Collection View Create
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -27,7 +28,9 @@ class ExploreViewController: UIViewController, UICollectionViewDataSource, UICol
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "photoCell", for: indexPath) as! PhotoCell
         let image = unlockedImages[indexPath.item]
+        let collTitle = data[indexPath.item].title
         cell.imageView.image = image
+        cell.label.text = collTitle
         cell.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tap(_:))))
         return cell
     }
@@ -81,6 +84,7 @@ class ExploreViewController: UIViewController, UICollectionViewDataSource, UICol
         for index in 0...data.count-1 {
             if data[index].isUnlocked == false {
                 lockedImages.append(UIImage(named: "\(index)")!)
+                tempString = data[index].title
             } else if data[index].isUnlocked == true {
                 unlockedImages.append(UIImage(named: "\(index)")!)
                 selectedArray.append(index)
