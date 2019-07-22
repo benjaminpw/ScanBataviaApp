@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7C8-Wz-7KC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3bd-UZ-E3B">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -671,15 +671,153 @@
             </objects>
             <point key="canvasLocation" x="2772" y="1482"/>
         </scene>
+        <!--Page Control View Controller-->
+        <scene sceneID="X7Q-rh-Pm8">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="3bd-UZ-E3B" customClass="PageControlViewController" customModule="JakartaLearningProject" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hpb-px-l8O" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2930" y="3"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="e1M-1j-tjc">
+            <objects>
+                <viewController storyboardIdentifier="screenOne" id="CUN-mi-fvs" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rzd-cY-lwz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ScanOnboarding" translatesAutoresizingMaskIntoConstraints="NO" id="tm4-Yc-aC6">
+                                <rect key="frame" x="59" y="244" width="297" height="217"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="middleTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JbN-In-4Ac">
+                                <rect key="frame" x="107" y="526" width="204" height="91"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Capture and Learn all things around You">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" metaFont="system" size="17"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingMiddle" baseWritingDirection="natural" paragraphSpacing="3" paragraphSpacingBefore="3" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="left aktif" translatesAutoresizingMaskIntoConstraints="NO" id="TuN-VZ-hoc">
+                                <rect key="frame" x="115" y="695" width="185" height="10"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="Sh9-mv-ndJ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ahd-y1-gLl" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2062" y="7"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="2xU-yI-66W">
+            <objects>
+                <viewController storyboardIdentifier="screenTwo" id="m0n-JP-XkT" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7pH-tI-wjC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="middle aktif" translatesAutoresizingMaskIntoConstraints="NO" id="BAx-Kz-1tZ">
+                                <rect key="frame" x="115" y="695" width="185" height="10"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DiscoverOnboarding" translatesAutoresizingMaskIntoConstraints="NO" id="otw-AY-ret">
+                                <rect key="frame" x="63" y="243" width="290" height="202"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="middleTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uUZ-gu-QXl">
+                                <rect key="frame" x="96" y="530" width="222" height="91"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Not just learn, explore some new place near You">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="17"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingMiddle" baseWritingDirection="natural" paragraphSpacing="3" paragraphSpacingBefore="3" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="eqc-dt-BgS"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Isx-R8-nBL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1370" y="6"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="BXZ-o3-pw3">
+            <objects>
+                <viewController storyboardIdentifier="screenThree" id="r8p-XI-U5A" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bgQ-DE-5G6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bcJ-7e-GzU">
+                                <rect key="frame" x="154" y="791" width="106" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="DoneButton"/>
+                                <connections>
+                                    <segue destination="7C8-Wz-7KC" kind="show" id="hha-Tj-oNj"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="InformationOnboarding" translatesAutoresizingMaskIntoConstraints="NO" id="ift-PL-Wrd">
+                                <rect key="frame" x="2" y="134" width="410" height="350"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="middleTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6sI-OM-Pzr">
+                                <rect key="frame" x="71" y="545" width="272" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Discover the Information, and Have fun with a new way of learning new place !">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="17"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingMiddle" baseWritingDirection="natural" paragraphSpacing="3" paragraphSpacingBefore="3" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="right aktif" translatesAutoresizingMaskIntoConstraints="NO" id="Ki1-fP-eug">
+                                <rect key="frame" x="115" y="693" width="185" height="10"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="xQg-Ox-fiL"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7MK-GJ-ubQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-683" y="6"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="DiscoverOnboarding" width="747" height="720"/>
+        <image name="DoneButton" width="107" height="36"/>
+        <image name="InformationOnboarding" width="672" height="1290"/>
         <image name="Kota Tua Map" width="842" height="1191"/>
+        <image name="ScanOnboarding" width="660" height="660"/>
         <image name="explored" width="24" height="26"/>
+        <image name="left aktif" width="86" height="17"/>
         <image name="map" width="26" height="25"/>
+        <image name="middle aktif" width="87" height="17"/>
+        <image name="right aktif" width="86" height="17"/>
         <image name="scan" width="26" height="26"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="x4k-V3-irV"/>
+        <segue reference="bte-hw-v0f"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.99763482810000004" green="0.75061158090000002" blue="0.31111527820000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
 </document>
