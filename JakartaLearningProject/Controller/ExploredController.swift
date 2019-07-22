@@ -26,10 +26,9 @@ class ExploreViewController: UIViewController, UICollectionViewDataSource, UICol
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "photoCell", for: indexPath) as! PhotoCell
-        let  image = unlockedImages[indexPath.item]
+        let image = unlockedImages[indexPath.item]
         cell.imageView.image = image
         cell.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tap(_:))))
-        
         return cell
     }
     

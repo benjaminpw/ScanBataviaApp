@@ -28,7 +28,7 @@ func loadData() -> [PlaceData] {
         Child = Rp 600/person
         College Student = Rp 1.000/person
         Adult = Rp 2.000/person
-        """, link: "https://id.wikipedia.org/wiki/Museum_Fatahillah", location: "", image: "0", thumbnail: "", isUnlocked: false, latitude: -6.135200, longitude: 106.813301, tips: """
+        """, link: "https://id.wikipedia.org/wiki/Museum_Fatahillah", location: "", image: "0", thumbnail: "thumbnail0", isUnlocked: false, latitude: -6.135200, longitude: 106.813301, tips: """
 -Don't make any disturbing noise
 -No eat or drink inside
 -Smoking / vape totally prohibited
@@ -52,7 +52,7 @@ func loadData() -> [PlaceData] {
 
         Ticket Price:
         Rp 5.000/person
-        """, link: "https://id.wikipedia.org/wiki/Museum_Bank_Indonesia", location: "", image: "1", thumbnail: "", isUnlocked: true, latitude: -6.137159, longitude: 106.812989, tips: """
+        """, link: "https://id.wikipedia.org/wiki/Museum_Bank_Indonesia", location: "", image: "1", thumbnail: "thumbnail1", isUnlocked: true, latitude: -6.137159, longitude: 106.812989, tips: """
 -Don't make any disturbing noise
 -No eat or drink inside
 -Smoking / vape totally prohibited
@@ -73,7 +73,7 @@ func loadData() -> [PlaceData] {
         Ticket Price:
         Rp 2.000/person
         Free entry for Students, and Mandiri Banks customers
-        """, link: "https://id.wikipedia.org/wiki/Museum_Bank_Mandiri", location: "", image: "2", thumbnail: "", isUnlocked: true, latitude: -6.138051, longitude: 106.813346, tips: """
+        """, link: "https://id.wikipedia.org/wiki/Museum_Bank_Mandiri", location: "", image: "2", thumbnail: "thumbnail2", isUnlocked: true, latitude: -6.138051, longitude: 106.813346, tips: """
 -Don't make any disturbing noise
 -No eat or drink inside
 -Smoking / vape totally prohibited
@@ -92,7 +92,7 @@ func loadData() -> [PlaceData] {
 
         Ticket Price:
         Rp 5.000/person
-        """, link: "https://en.wikipedia.org/wiki/Wayang_Museum", location: "", image: "3", thumbnail: "", isUnlocked: true, latitude: -6.1347, longitude: 106.8124, tips: """
+        """, link: "https://en.wikipedia.org/wiki/Wayang_Museum", location: "", image: "3", thumbnail: "thumbnail3", isUnlocked: true, latitude: -6.1347, longitude: 106.8124, tips: """
 -Don't make any disturbing noise
 -No eat or drink inside
 -Smoking / vape totally prohibited
@@ -123,7 +123,7 @@ func loadData() -> [PlaceData] {
         
         Ticket Price:
         Free
-        """, link: "", location: "", image: "4", thumbnail: "", isUnlocked: true, latitude: -6.133666132, longitude: 106.808496766, tips: """
+        """, link: "", location: "", image: "4", thumbnail: "thumbnail4", isUnlocked: true, latitude: -6.133666132, longitude: 106.808496766, tips: """
 -Don't make any disturbing noise
 -No eat or drink inside
 -Smoking / vape totally prohibited
@@ -143,7 +143,7 @@ func loadData() -> [PlaceData] {
 
         Average Cost:
         Rp300.000 for two people
-        """, link: "https://en.wikipedia.org/wiki/Cafe_Batavia", location: "", image: "5", thumbnail: "", isUnlocked: true, latitude: -6.134438, longitude: 106.812706, tips: """
+        """, link: "https://en.wikipedia.org/wiki/Cafe_Batavia", location: "", image: "5", thumbnail: "thumbnail5", isUnlocked: true, latitude: -6.134438, longitude: 106.812706, tips: """
 -Don't make any disturbing noise
 -No eat or drink inside
 -Smoking / vape totally prohibited
@@ -160,7 +160,7 @@ func loadData() -> [PlaceData] {
 
         Ticket Price:
         Rp 10.000/person
-        """, link: "", location: "", image: "6", thumbnail: "", isUnlocked: true, latitude: -6.135932, longitude: 106.811317, tips: """
+        """, link: "", location: "", image: "6", thumbnail: "thumbnail6", isUnlocked: true, latitude: -6.135932, longitude: 106.811317, tips: """
 -Don't make any disturbing noise
 -No eat or drink inside
 -Smoking / vape totally prohibited
